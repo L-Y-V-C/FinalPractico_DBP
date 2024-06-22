@@ -1,0 +1,113 @@
+.sidebar
+{
+  margin-top: 56px;
+  width: 200px;
+  height: 120%;
+  background-color: #36304A; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sidebar a {
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffffff;
+  display: block;
+  font-weight: bold;
+}
+.sidebar a:hover
+{
+  background-color: #5e5189;
+}
+.admi-tb table
+{
+  background-color: rgb(255, 255, 255, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.admi-tb table tbody tr:nth-child(even)
+{
+  background-color: #F5F5F5;
+}
+.admi-tb table tbody tr:nth-child(odd)
+{
+  background-color: #FFFFFF;
+}
+.admi-tb
+{
+  margin-left: 200px;
+  padding: 20px;
+}
+.admi-tb th, td {
+  
+  padding: 8px;
+  text-align: left;
+}
+table .body_text
+{
+  background-color: #F5F5F5;
+}
+table .upper_text
+{
+  background-color: #36304A;
+  color: white;
+}
+.admi-tb .boton {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #4A918F;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.admi-tb .boton:hover {
+  background-color: #b1b07e;
+}
+.admi-tb form
+{
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+.admi-tb label
+{
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.admi-tb input[type="text"]
+{
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.admi-tb button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, rgba(116,177,224,1) 0%, rgba(149,101,185,1) 100%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+.admi-tb button[type="submit"]:hover
+{
+  background: linear-gradient(90deg, rgb(59, 151, 222) 0%, rgb(116, 56, 162) 100%);
+}

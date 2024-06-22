@@ -1,0 +1,40 @@
+{% extends './layout.html' %}
+
+{% block title %}Panel Administrador{% endblock %}
+
+{% block body %}
+    <div class="sidebar">
+        <a href="/listarUsuarios">Lista de usuarios</a>
+        <a href="/listarPublicaciones">Lista de publicaciones</a>
+      </div>
+      {% if publicaciones %}
+      <div class="admi-tb">
+      <table>
+        <thead>
+          <tr class="upper_text">
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for publicacion in publicaciones %}
+            <tr>
+              <th scope="row">{{publicacion.id}}</th>
+              <td>{{publicacion.nombre_publicacion}}</td>
+              <td>{{publicacion.descripcion}}</td>
+              <td>{{publicacion.ruta_imagen}}</td>
+              <td>
+                <a href="/eliminarPublicacion/{{ publicacion.id }}" class="boton">Eliminar</a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+        <p>No hay publicaciones</p>
+      {% endif %}
+      </div>
+{% endblock %}

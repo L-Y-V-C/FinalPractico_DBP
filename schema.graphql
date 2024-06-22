@@ -1,0 +1,33 @@
+type Usuario
+{
+    id: ID!
+    username: String!
+    password: String!
+    nom_comple: String!
+    estado: Int!
+    rol: Int!
+}
+type Publicaciones
+{
+    id: ID!
+    nombre_publicacion: String!
+    descripcion: String!
+    ruta_imagen: String!
+}
+type Mutation{
+    crear_reg(username: String!, password: String!, nom_comple: String!): Usuario!
+    crear_pub(nombre_publicacion: String!, descripcion: String!, ruta_imagen: String!): Publicaciones!
+    edit_user(id: ID!, username: String!, password: String!, nom_comple: String!, estado: Int!, rol: Int!): Usuario
+    delete_user(id: ID!): Usuario
+    delete_pub(id: ID!): Publicaciones
+}
+type Query
+{
+    all_publicaciones: [Publicaciones]
+    all_users: [Usuario]
+    user_by_id(id:ID): Usuario
+    listarUsuariosOrdUsuAsc: [Usuario!]!
+    listarUsuariosOrdUsuDesc: [Usuario!]!
+    listarUsuariosOrdNomAsc: [Usuario!]!
+    listarUsuariosOrdNomDesc: [Usuario!]!
+}

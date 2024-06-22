@@ -1,0 +1,17 @@
+{% extends './layout.html' %}
+
+{% block title %}Publicaciones{% endblock %}
+
+{% block body %}
+    {% if publicaciones %}
+        {% for publicacion in publicaciones%}
+            <div class="menuitem">
+                <h2> {{ publicacion.nombre_publicacion }} </h2>
+                <img src="{{ url_for('static', filename='uploads/' + publicacion.ruta_imagen) }}" alt="{{ publicacion.descripcion }}">
+                <p>{{ publicacion.descripcion }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No hay publicaciones</p>
+    {% endif %}
+{% endblock %}
